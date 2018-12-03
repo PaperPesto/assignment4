@@ -7,7 +7,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class GameControlComponent implements OnInit {
 
-  @Output('counter') serverCreated = new EventEmitter<{ counter: number }>();
+  @Output('addCounter') serverCreated = new EventEmitter<{ counter: number }>();
   counter: number;
   setIntervalReference;
 

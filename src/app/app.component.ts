@@ -8,17 +8,20 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'assignment4';
 
-  numbers: any[]=[];
+  evenNumbers: number[] = [];
+  oddNumbers: number[] = [];
 
-  onCounterAdded(payload: any){
+  onCounterAdded(payload: any) {
 
     console.log('[app.component.ts] Aggiunto counter', payload);
 
-    if(payload.counter % 2 === 0) {
+    if (payload.counter % 2 === 0) {
       console.log('even number:', payload.counter);
+      this.evenNumbers.push(payload.counter);
     }
-    else{
+    else {
       console.log('odd number:', payload.counter);
+      this.oddNumbers.push(payload.counter);
     }
   }
 }

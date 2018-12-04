@@ -1,3 +1,6 @@
 <app-game-control
 (addCounter)="onCounterAdded($event)"
 ></app-game-control>
+
+<app-even *ngFor="let evenNumber of evenNumbers" [number]="evenNumber"></app-even>
+<app-odd *ngFor="let oddNumber of oddNumbers" [number]="oddNumber"></app-odd>

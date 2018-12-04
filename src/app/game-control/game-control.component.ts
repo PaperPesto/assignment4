@@ -7,7 +7,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class GameControlComponent implements OnInit {
 
-  @Output('addCounter') serverCreated = new EventEmitter<{ counter: number }>();
+  @Output('addCounter') serverCreated = new EventEmitter<number>();
   counter: number;
   setIntervalReference;
 
@@ -26,7 +26,7 @@ export class GameControlComponent implements OnInit {
     }
     else{
       this.setIntervalReference = setInterval(() => {
-        this.serverCreated.emit({counter: this.counter});
+        this.serverCreated.emit( this.counter);
         this.counter = this.counter + 1;
         console.log('Ref: %s - Counter: %s', this.setIntervalReference, this.counter);
       }, 1000);

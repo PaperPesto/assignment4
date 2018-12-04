@@ -11,17 +11,17 @@ export class AppComponent {
   evenNumbers: number[] = [];
   oddNumbers: number[] = [];
 
-  onCounterAdded(payload: any) {
+  onCounterAdded(number: number) {
 
-    console.log('[app.component.ts] Aggiunto counter', payload);
+    console.log('[app.component.ts] Aggiunto counter', number);
 
-    if (payload.counter % 2 === 0) {
-      console.log('even number:', payload.counter);
-      this.evenNumbers.push(payload.counter);
+    if (number % 2 === 0) {
+      console.log('even number:', number);
+      this.evenNumbers.push(number);
     }
     else {
-      console.log('odd number:', payload.counter);
-      this.oddNumbers.push(payload.counter);
+      console.log('odd number:', number);
+      this.oddNumbers.push(number);
     }
   }
 }
